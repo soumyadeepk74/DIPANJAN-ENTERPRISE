@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIPANJAN ENTERPRISE</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/style1.css">
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="icon" type="image/png" href="static/logo.png">
+</head>
+<body>
+    <header>
+    <div class="nav-container">
+        <div class="logo-name">
+            <img src="static/logo.png" alt="Logo" class="logo">
+            <span class="company-name-header">DIPANJAN <br> ENTERPRISE</span>
+        </div>
+        <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="products.html" class="nav-active">PRODUCTS</a></li>
+          <li><a href="clients.html">CLIENTS</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        </nav>
+    </div>
+</header>
+<main>
+
+
+<div class="banner-overlap">
+<img src="static/products/products1.png" alt="image" style="width: 100vw; height: 75vh;">
+<h1>Our Products >>></h1>
+</div>
+<div class="products-main-heading" style="margin-top: 100px;"><h2>Products</h2><h2>Type</h2></div>
+<div class="products-type-row" style="margin-bottom: 120px; margin-top: 40px;">
+  <div class="product-type-box" style="background: #FFB6B6;">
+    <div class="product-type-box-heading"><h2>Signaling Products</h2></div>
+    <div class="img-wrapper"><img src="static/products/signaling.jpg" alt="Signaling Products" /></div>
+    <div class="product-type-desc">We specialize in supplying a 
+wide range of high-quality 
+railway Signalling products, 
+including WAGO CT Boxes, 
+Terminal Blocks, DC–DC 
+Converters, Signalling Cables, 
+Route Indicators, Electrical 
+Key Transmitters, and various 
+other signalling items as per 
+railway requirements.</div>
+    <a href="signaling_products.html" class="type-link-btn">Explore<img src="static/products/arrownext.png" alt="arrow next"></a>
+  </div>
+  <!-- Telecom -->
+  <div class="product-type-box" style="background: #B6D3FF;">
+    <div class="product-type-box-heading"><h2>Telecom Products</h2></div>
+    <div class="img-wrapper"><img src="static/products/telecom.jpg" alt="Telecom Products" /></div>
+    <div class="product-type-desc">We provide premium-quality 
+Railway Telecom Equipment, 
+including Magneto Telephones, 
+Emergency Socket Boxes & 
+Plugs, Earth Leakage 
+Detectors, HDPE/DWC Pipes, 
+along with a wide range of 
+other products tailored to 
+meet client requirements.</div>
+    <a href="telecom_products.html" class="type-link-btn">Explore<img src="static/products/arrownext.png" alt="arrow next"></a>
+  </div>
+  <!-- Mechanical -->
+  <div class="product-type-box" style="background: #B6FDB6;">
+    <div class="product-type-box-heading"><h2>Mechanical Products</h2></div>
+    <div class="img-wrapper"><img src="static/products/mechanical.jpg" alt="Mechanical Products" /></div>
+    <div class="product-type-desc">We supply high-quality 
+Railway Mechanical Products, 
+including Steel Trolleys, 
+Railway Built-up Crossings, 
+GFN-66 Liners, Glued 
+Insulated Rail Joints, along 
+with various other mechanical 
+items as per railway standards and client requirements</div>
+    <a href="mechanical_products.html" class="type-link-btn">Explore<img src="static/products/arrownext.png" alt="arrow next"></a>
+  </div>
+</div>
+<a href="all_products.html" class="aproducts"><h4>Explore all <br> Products</h4><img src="static/products/arrownext.png" alt="image"></a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.product-type-box');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+</script>
+
+
+
+</main>
+  <footer>
+    <div class="footer-content0"></div>
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p>Our  principal   commitment  is  to 
+the   fulfilment  of  our    clientele's 
+requirements,      achieved       by 
+providing products of  superlative 
+quality  at   cost-effective   prices. 
+As  a   specialised   purveyor,   we 
+distribute   diverse    matériel    for 
+use    within    the    domains      of 
+railway      signalling,      telecommunication     and    mechanical</p>
+    </div>
+
+    <div class="footer-section items">
+  <h2>Our Products</h2>
+  <ol class="footer-items-list">
+    <li>
+      <a href="signaling_products.html">
+        &gt; Signaling Products
+      </a>
+    </li>
+    <li>
+      <a href="telecom_products.html">
+        &gt; Telecom Products
+      </a>
+    </li>
+    <li>
+      <a href="mechanical_products.html">
+        &gt; Mechanical Products
+      </a>
+    </li>
+    <li>
+      <a href="all_products.html">
+        &gt; All Products
+      </a>
+    </li>
+  </ol>
+</div>
+
+
+    <div class="footer-section contacts">
+      <h2>Contact Us</h2>
+      <div class="footer-contact">
+        <div class="footer-contact c1">
+          <img src="static/phone.png" alt="Phone" class="footer-icon">
+          033-45022432 / 70225 09225
+        </div>
+        <div class="footer-contact c1">
+          <img src="static/email.png" alt="Email" class="footer-icon">
+          dipanjanenterprise@gmail.com
+        </div>
+        <div class="footer-contact c1">
+          <img src="static/address.png" alt="Address" class="footer-icon" style="margin-bottom: 30px;">
+          25, Strand Road, Marshall House, 7th floor, Room No - 775 & 776, Kolkata : 700001
+        </div>
+        <div class="footer-contact c1" style="margin-top: 0;">
+          <img src="static/address.png" alt="Address" class="footer-icon" style="margin-bottom: 30px;">
+          16/C, Pravesh Nagar, P.O - Pravesh Nagar, Serampore, Dist - Hoogly, Pin - 712249, West Bengal
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-content1">
+    <img src="static/logo.png" alt="image" style="height: 90px;">
+    <span class="company-name-header" style="margin-right: 20px;">DIPANJAN <br> ENTERPRISE</span>
+    <img src="static/instagram.png" alt="image">
+    <img src="static/x.png" alt="image">
+    <img src="static/fb.png" alt="image">
+    <img src="static/linkedin.png" alt="image">
+  </div>
+  <div class="footer-copy">
+    &copy; 2025 Dipanjan Enterprise. All rights reserved.
+  </div>
+</footer>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.footer-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+</script>
+</body>
+</html>

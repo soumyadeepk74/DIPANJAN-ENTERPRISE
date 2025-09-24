@@ -1,0 +1,153 @@
+/* About Page */
+.about-banner{
+    width: 100vw;
+}
+.about-main-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0px 4px 100px 0px #00000040;
+    padding: 20px;
+    border-radius: 20px;
+}
+.about-main-data{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin: 100px 10vw 100px 10vw;
+    gap: 150px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 2s ease-out forwards;
+}
+.about-main-left img{
+    width: 512px;
+    height: 368px;
+    border-radius: 20px;
+}
+.about-main-right{
+    height: 300*2px;
+}
+.about-main-right p{
+    font-size: 1.7em;
+    font-family: Averia Gruesa Libre;
+}
+.about-main-right h2{
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 1.9em;
+    font-family: Autour One;
+}
+.about-main-right-heading{
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    border-radius: 10px;
+}
+.about-main-right-heading h1{
+    padding: 10px;
+}
+.about-main-right-heading h1:first-child{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.about-main-right-heading h1:last-child{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;color: white;
+}
+@media (max-width:400px){
+    .about-main-data{
+        flex-direction: column;
+        gap: 30px;
+        margin: 100px 0;
+    }
+    .about-main-left{
+        display: none;
+    }
+    .about-main-left img{
+        width: 312px;
+        height: 308px;
+    }
+    .about-main-right{
+        height: 300px;
+        width: 200px;
+    }
+    .about-main-right h2{font-size: 1.2em;}
+    .about-main-right p{font-size: 1em;}
+}
+
+/* clients */
+/* Container for the entire section, like the pink box in the image */
+.logos-section-container {
+    background-color: #ffb6b6;
+    padding: 0 40px 0 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 70%;
+    height: 340px;
+    /* width: 70%;
+    max-width: 1200px; */
+    margin-top: 100px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    /* animation: slideUp 2s ease-out forwards; */
+    transition: opacity 1s ease-out, transform 1.4s ease-out;
+}
+.logos-section-container.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-title {
+    text-align: center;
+    color: #fff;
+    background-color: #004d99;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    top: 0;
+    font-size: 2rem;
+}
+
+.logo-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.logo-carousel-track img {
+    height: 150px; /* Adjust as needed */
+    flex-shrink: 0;
+    margin: 0 15px; /* Spacing between logos */
+    box-sizing: border-box;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.logo-carousel-track {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* This width ensures the duplicated logos are next to the original set */
+    width: max-content; 
+    /* The animation will be applied dynamically by JavaScript */
+    animation-play-state: running; 
+}
+
+/* Keyframes for the infinite sliding animation */
+@keyframes slide-right-to-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* This moves the entire track to the left by exactly half its width, 
+           making the second set of logos align perfectly where the first set was. */
+        transform: translateX(-50%); 
+    }
+}

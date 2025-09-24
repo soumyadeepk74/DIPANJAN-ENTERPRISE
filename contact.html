@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIPANJAN ENTERPRISE</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/style1.css">
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="icon" type="image/png" href="static/logo.png">
+</head>
+<body>
+    <header>
+    <div class="nav-container">
+        <div class="logo-name">
+            <img src="static/logo.png" alt="Logo" class="logo">
+            <span class="company-name-header">DIPANJAN <br> ENTERPRISE</span>
+        </div>
+        <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="products.html">PRODUCTS</a></li>
+          <li><a href="clients.html">CLIENTS</a></li>
+          <li><a href="contact.html" class="nav-active">CONTACT US</a></li>
+        </ul>
+        </nav>
+    </div>
+</header>
+<main>
+
+
+<div class="banner-overlap">
+  <img src="static/contact/banner.jpg" alt="image" style="width: 100vw; height: 75vh;">
+  <h1 style="font-family: 'Archivo Black';">Contact US >>></h1>
+</div>
+
+<div class="contact-grid" style="margin-top: 150px;">
+  <div class="contact-left">
+    <!-- Director Box -->
+    <div class="contact-card director-card">
+      <div class="card-icon">
+        <img src="static/contact/director.jpg" alt="Director" style="height: 70px; width: 40px; border-radius: 10px;"/>
+      </div>
+      <div>
+        <span class="card-title">DIRECTOR :</span>
+        <div>Prasenjit Ghosh</div>
+        <div>Mobile No.: 8240593677 / 9830239890</div>
+      </div>
+    </div>
+
+    <!-- Correspondence Office -->
+    <div class="contact-card address-card">
+      <div class="card-icon">
+        <img src="static/address.png" alt="Location" />
+      </div>
+      <div>
+        <span class="card-title">CORRESPONDENCE OFFICE ADDRESS :</span>
+        <div>16/C, Pravesh Nagar, P.O - Pravesh Nagar</div>
+        <div>Serampore, Dist - Hoogly</div>
+        <div>Pin - 712249, West Bengal</div>
+      </div>
+    </div>
+
+    <!-- Sales Office -->
+    <div class="contact-card sales-card">
+      <div class="card-icon">
+        <img src="static/address.png" alt="Location" />
+      </div>
+      <div>
+        <span class="card-title">SALES OFFICE ADDRESS :</span>
+        <div>25, Strand Road, Marshall House, 7th Floor, Room No- 775 & 776, Kolkata- 700001</div>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-card phone-card">
+      <div class="card-icon">
+        <img src="static/phone.png" alt="Phone" />
+      </div>
+      <div>
+        <span class="card-title">PHONE :</span>
+        <div>033-45022432</div>
+        <div>70225 09225</div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-card email-card" style="margin-bottom: 55px;">
+      <div class="card-icon">
+        <img src="static/email.png" alt="Email" />
+      </div>
+      <div>
+        <span class="card-title">EMAIL :</span>
+        <div>dipanjanenterprise@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <div class="location-header">LOCATION</div>
+    <div class="location-map" >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d921.0085685181448!2d88.34830408974867!3d22.5778214001949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a2fa0c6e31%3A0xae74bc2d2b0cbbf7!2sMarshall%20House%20Owners&#39;%20Society!5e0!3m2!1sen!2sin!4v1756554059566!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        width="100%" height="340px" style="border:0;" allowfullscreen="" loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.contact-grid');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+</script>
+
+
+</main>
+  <footer>
+    <div class="footer-content0"></div>
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p>Our  principal   commitment  is  to 
+the   fulfilment  of  our    clientele's 
+requirements,      achieved       by 
+providing products of  superlative 
+quality  at   cost-effective   prices. 
+As  a   specialised   purveyor,   we 
+distribute   diverse    matériel    for 
+use    within    the    domains      of 
+railway      signalling,      telecommunication     and    mechanical</p>
+    </div>
+
+    <div class="footer-section items">
+  <h2>Our Products</h2>
+  <ol class="footer-items-list">
+    <li>
+      <a href="signaling_products.html">
+        &gt; Signaling Products
+      </a>
+    </li>
+    <li>
+      <a href="telecom_products.html">
+        &gt; Telecom Products
+      </a>
+    </li>
+    <li>
+      <a href="mechanical_products.html">
+        &gt; Mechanical Products
+      </a>
+    </li>
+    <li>
+      <a href="all_products.html">
+        &gt; All Products
+      </a>
+    </li>
+  </ol>
+</div>
+
+
+    <div class="footer-section contacts">
+      <h2>Contact Us</h2>
+      <div class="footer-contact">
+        <div class="footer-contact c1">
+          <img src="static/phone.png" alt="Phone" class="footer-icon">
+          033-45022432 / 70225 09225
+        </div>
+        <div class="footer-contact c1">
+          <img src="static/email.png" alt="Email" class="footer-icon">
+          dipanjanenterprise@gmail.com
+        </div>
+        <div class="footer-contact c1">
+          <img src="static/address.png" alt="Address" class="footer-icon" style="margin-bottom: 30px;">
+          25, Strand Road, Marshall House, 7th floor, Room No - 775 & 776, Kolkata : 700001
+        </div>
+        <div class="footer-contact c1" style="margin-top: 0;">
+          <img src="static/address.png" alt="Address" class="footer-icon" style="margin-bottom: 30px;">
+          16/C, Pravesh Nagar, P.O - Pravesh Nagar, Serampore, Dist - Hoogly, Pin - 712249, West Bengal
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-content1">
+    <img src="static/logo.png" alt="image" style="height: 90px;">
+    <span class="company-name-header" style="margin-right: 20px;">DIPANJAN <br> ENTERPRISE</span>
+    <img src="static/instagram.png" alt="image">
+    <img src="static/x.png" alt="image">
+    <img src="static/fb.png" alt="image">
+    <img src="static/linkedin.png" alt="image">
+  </div>
+  <div class="footer-copy">
+    &copy; 2025 Dipanjan Enterprise. All rights reserved.
+  </div>
+</footer>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.footer-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+</script>
+</body>
+</html>

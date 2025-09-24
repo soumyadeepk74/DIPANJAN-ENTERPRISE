@@ -1,0 +1,561 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #165487; */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: white;
+}
+
+header {
+    background: #165487;
+ /* Same rose red as body */
+    padding: 0.5em 0;
+}
+/*Add (header)*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body {
+  /* Add top padding equal to the header height, so content isn't hidden! */
+    padding-top: 90px; /*Adjust if your header's height is different */
+    overflow-x: hidden;
+}
+.logo-name img{
+  height: 55px;
+  width: 55px;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;
+    height: 80px;
+    padding: 0 2em;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    padding-left: 500px;
+}
+
+.nav-list li {
+    /* margin-right: 2em; */
+    margin-right: 0.5em;
+
+
+    border: 3px solid #165487;
+}
+
+.nav-list li:last-child {
+    /* margin-right: 3em; */
+    /* margin-right: 1em; */
+    margin-right: 0.5em;
+}
+
+.nav-list a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 1.3em;
+  /* font-size: 1.1em; */
+  letter-spacing: 1px;
+  /* border-radius: 10px; */
+  transition: border 0.2s, background 0.2s;
+
+  font-size: 0.9em;
+}
+
+.nav-list a.nav-active {
+  color: #fff !important;
+  /* font-weight: bold; */
+  /* border: 3px solid #fff; */
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  filter: none;
+  /* padding: 0.5em 1.3em; */
+  transition: border 0.2s, background 0.2s;
+
+  background: #f9dedc90;
+  /* padding: 7px 7px; */
+}
+
+.nav-list a:hover{
+  background: #ffffff6d;
+  border-radius: 10px;
+}
+
+.section-content {
+    min-height: 400px;
+    background: #FF5A5F; /* Rose Red */
+}
+
+footer {
+    /* background: #333; Charcoal */
+    padding: 0 0 0 0;
+    color: #fff;
+    width: 100vw;
+    position: relative;
+
+    /* padding-top: 60px; */
+    background: #262626;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2em;
+    gap: 70px;
+
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+.footer-content0{
+  width: 100vw;
+  height: 80px;
+  background: #373738;
+}
+.footer-section {
+  flex: 1 1 210px;
+  margin-bottom: 1.5em;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1.4s ease-out;
+}
+.footer-section.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.footer-section h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.05em;
+    border-bottom: 2px solid #ffff14;
+    display: inline-block;
+}
+.footer-section.about h2{
+  margin-left: 30%;
+  margin-bottom: 0;
+}
+.footer-section.items h2{
+  margin-left: 10px;
+}
+.footer-section.contacts h2{
+  margin-left: 35px;
+}
+
+.footer-section ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: disc;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 200px;
+    margin-bottom: 1.5em;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 1.22em;
+    color: #efff14da;
+}
+
+.footer-copy {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.98em;
+    color: #aaa;
+    background: #373738;
+    font-family: 'Bowlby One';
+    font-size: 1.2em;
+}
+
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-contact.c1{
+  display: flex;
+  flex-direction: row;
+  /* top: 0; */
+  align-items: center;
+  gap: 5px;
+}
+.footer-contact.c1 img{
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 1em;
+    }
+    .footer-section, .footer-logo {
+        margin-bottom: 1em;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav-list li {
+        margin: 0 0 8px 0;
+    }
+}
+/* Add (footer) */
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.footer-section.about{
+  margin-right: 50px;
+}
+.footer-section.items{
+  padding-left: 60px;
+}
+.footer-section.contacts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-section.items .footer-dropdown {
+  width: 90%;
+  padding: 7px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: 1.5px solid #39ff14;
+  font-size: 1em;
+  margin-top: 8px;
+}
+.footer-items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-items-list li {
+  margin: 5px 0;
+}
+
+.footer-items-list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.04em;
+  font-family: inherit;
+  transition: color 0.2s;
+  font-weight: 500;
+  display: block;
+  padding-left: 8px;
+}
+
+.footer-items-list a:hover {
+  color: #39ff14; /* neon highlight on hover */
+}
+.footer-section.contacts{
+  width: 200px;
+}
+
+.footer-content1{
+  background-color: #333;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 11%;
+  margin-bottom: 40px;
+  gap: 10px;
+  background: #262626;
+}
+.footer-content1 img{
+  height: 50px;
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        height: auto;
+        padding: 1em 0;
+    }
+    .nav-list a {
+        font-size: 1em;
+        padding: 0.4em 0.7em;
+    }
+    .footer-content {
+        padding: 0 0.5em;
+    }
+    .footer-logo img {
+        height: 32px;
+    }
+}
+/* Add 1*/
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+.company-name-header {
+    color: white;
+    font-weight: bold;
+    font-size: 1.55em;
+
+    /* font-size: 2em; */
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*Add 2 */
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* pushes footer down */
+}
+/*Add 3 (contact)*/
+/* Hero/Title Section */
+.contact-grid {
+  display: flex;
+  /* gap: 28px; */
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 1400px;
+  flex-wrap: wrap;
+
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1.4s ease-out;
+}
+.contact-grid.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-left, .contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 440px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(30,30,30,0.11);
+  padding: 63px 72px;
+}
+
+.contact-left { 
+  min-width: 340px; 
+  /* max-width: 580px;  */
+  margin-right: 20px;
+}
+.contact-right { 
+  min-width: 320px; 
+  max-width: 630px; 
+  margin-left: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.card-icon img {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+.card-title {
+  font-size: 1.16rem;
+  font-weight: bold;
+  color: #23272a;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.location-header {
+  background: #e6e8ed;
+  color: #23272a;
+  font-weight: bold;
+  font-size: 1.18rem;
+  border-radius: 10px;
+  padding: 10px 21px;
+  margin-bottom: 19px;
+  display: inline-block;
+  max-width: fit-content;
+}
+
+.location-map iframe {
+  width: 100%;
+  min-height: 260px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 2px 18px rgba(40,40,50,0.13);
+}
+
+/* Responsive */
+@media (max-width: 991px){
+  .contact-grid { flex-direction: column; gap: 22px; }
+  .contact-left, .contact-right { max-width: 98vw; }
+}
+
+/* Card text styles */
+.contact-card div {
+  font-size: 1rem;
+  color: #23272a;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.contact-banner-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 36px 0 18px 0;
+}
+.banner-img img {
+  width: 240px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 19px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+.banner-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 500px;
+}
+.banner-title h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0px;
+  letter-spacing: 1.5px;
+}
+.us-span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+  text-shadow: 0 2px 8px #444;
+}
+.banner-underline {
+  width: 96%;
+  border-bottom: 5px solid #fff;
+  margin: 6px auto;
+}
+.banner-arrows {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .contact-banner-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .banner-img img {
+    width: 96vw;
+    height: 160px;
+    min-width: 220px;
+    max-width: 340px;
+  }
+}
+/* added */
+.contact-img-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;/* or adjust based on your card/canvas width */
+  margin: 35px 0 18px 0;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1.4s ease-out;
+}
+
+.contact-img {
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* Make the left image wider horizontally */
+.contact-img-wide {
+  /*width: 530px;*/ /* or match exactly to your contact card width below */
+  min-width: 320px;
+  /* max-width: 650px; */
+
+  height: 320px;
+  width: 1000px;
+}
+
+.contact-img:not(.contact-img-wide) {
+  /*width: 260px;*/ /* normal width for the right image */
+  min-width: 180px;
+  max-width: 320px;
+
+  width: 320px;
+  height: 320px;
+}
+
+/* Ensure card and image alignment is exact for desktop */
+@media (max-width: 1100px) {
+  .contact-img-wide { width: 95vw; }
+  .contact-img { width: 95vw; }
+  .contact-img-row { flex-direction: column; gap: 22px; }
+}
+.contact-left{
+  padding-bottom: 70px;
+}
